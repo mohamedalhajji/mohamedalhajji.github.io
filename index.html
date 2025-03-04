@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Al-Hajji</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mohamed Al-Hajji</h1>
+        <nav>
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('projects')">Projects</button>
+            <button onclick="showSection('resume')">Resume</button>
+        </nav>
+    </header>
+
+<!-- Home Section -->
+<section id="home">
+    <h2>About Me</h2>
+    <div class="about-container">
+        <p>Hey there! I'm a self-taught game developer working with Unreal Engine 5, researching its newest capabilities and primarily making games using Blueprints.</p>
+        <p>I also have a solid foundation in C++ and programming fundamentals like OOP. I enjoy creating intricate systems, developing UI in Figma, and applying seamless UX.</p>
+        <p>Having studied UX both online and in university, I use that expertise to ensure my games feel polished and accessible.</p>
+        <p>Right now, I'm learning by hands-on projects and actively creating games. I've completed three Epic Games courses in Game Design, Blueprinting, and UX. My goal is to keep growing as an indie developer while working toward joining a studio, where I can learn from a team and contribute with my best skills.</p>
+    </div>
+
+    <!-- Contact Section (Inside Home Section) -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form" action="https://formspree.io/f/mrbendqy" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+        <!-- Social Media Icons -->
+        <div class="social-links">
+            <a href="https://linkedin.com/in/mohamedalhajji" target="_blank">
+                <img src="assets/LI.png" alt="LinkedIn">
+            </a>
+            <a href="https://mohamedalhajji.itch.io/" target="_blank">
+                <img src="assets/itch.png" alt="Itch.io">
+            </a>
+            <a href="https://wa.me/+966598626359" target="_blank">
+                <img src="assets/WA.png" alt="WhatsApp">
+            </a>
+        </div>
+    </section>
+</section>
+
+    <!-- Projects Section (Initially Hidden) -->
+    <section id="projects" style="display: none;">
+        <h2>My Games</h2>
+        <div class="projects-container">
+            <div class="project">
+                <img src="assets/TTW.png" alt="The Time Within">
+                <h3>The Time Within</h3>
+                <p>An escape room that is set in both the past and the present, having to solve interconnected puzzles in order to "escape".</p>
+                <div class="button-container">
+                    <a href="https://mohamedalhajji.itch.io/the-time-within" target="_blank" class="play-now">Play Now</a>
+                </div>
+            </div>
+            
+            <div class="project">
+                <img src="assets/CE.png" alt="Cyber's Edge">
+                <h3>Cyber's Edge</h3>
+                <p>A high-speed runner through a neon cyberpunk city, dodging obstacles and chasing the ultimate high score.</p>
+                <div class="button-container">
+                    <a href="https://mohamedalhajji.itch.io/cybersedge" target="_blank" class="play-now">Play Now</a>
+                </div>
+            </div>
+            
+            <div class="project">
+                <img src="assets/GS.png" alt="GambaSim">
+                <h3>GambaSim</h3>
+                <p>A casino simulator where you play Blackjack, Roulette, Slots, and more. Win to earn XP, unlock higher bets, new modes, and customizations.</p>
+                <div class="button-container">
+                    <button class="coming-soon" disabled>Coming Soon</button>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <!-- Resume Section (Initially Hidden) -->
+    <section id="resume" style="display: none;">
+        <img src="assets/resume.png" alt="My Resume" class="resume-image">
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
