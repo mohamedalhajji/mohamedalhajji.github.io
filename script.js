@@ -4,9 +4,8 @@ function showSection(section) {
     document.getElementById("resume").style.display = section === "resume" ? "block" : "none";
 }
 
-// Contact Form Submission (Simulated)
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
 
     const form = this;
     const formData = new FormData(form);
@@ -15,20 +14,20 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         method: "POST",
         body: formData,
         headers: {
-            "Accept": "application/json"
+            Accept: "application/json"
         }
     })
-    .then(response => {
-        if (response.ok) {
-            alert("Message sent successfully!");
-            form.reset(); // Clear the form
-        } else {
-            response.json().then(data => {
-                alert(data.error || "Error sending message. Try again.");
-            });
-        }
-    })
-    .catch(() => {
-        alert("Something went wrong. Please try again later.");
-    });
+        .then((response) => {
+            if (response.ok) {
+                alert("Message sent successfully!");
+                form.reset();
+            } else {
+                response.json().then((data) => {
+                    alert(data.error || "Error sending message. Try again.");
+                });
+            }
+        })
+        .catch(() => {
+            alert("Something went wrong. Please try again later.");
+        });
 });
