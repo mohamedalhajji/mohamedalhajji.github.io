@@ -6,7 +6,7 @@
     <meta name="description" content="Mohamed Al-Hajji - Separate game development portfolio page." />
     <title>Mohamed Al-Hajji | Game Development</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="styles.css?v=20260510-2" />
+    <link rel="stylesheet" href="styles.css?v=20260510-3" />
 </head>
 <body>
     <header class="site-header">
@@ -26,6 +26,7 @@
             <a href="resume.html">CV</a>
             <a class="active" href="game-dev.html">Game Dev</a>
             <a href="index.html#contact">Contact</a>
+            <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">Light</button>
         </nav>
     </header>
 
@@ -34,6 +35,7 @@
             <div class="hero-inner">
                 <div class="hero-copy reveal">
                     <p class="eyebrow">Separate portfolio section</p>
+                    <p class="hero-name">Mohamed Al-Hajji</p>
                     <h1>Game development work.</h1>
                     <p class="hero-text">
                         This page keeps my game development work separate from my main software engineering portfolio.
@@ -71,54 +73,72 @@
                 <p>These projects are presented as game development experience, not as my main software engineering direction.</p>
             </div>
 
-            <div class="game-showcase">
-                <article class="game-feature reveal">
-                    <img src="assets/TTW.png" alt="The Time Within game screenshot" />
-                    <div>
-                        <span>Unreal Engine 5</span>
-                        <h3>The Time Within</h3>
-                        <p>
-                            A first-person escape room project with two linked time periods, environmental puzzle logic,
-                            interactable objects, inventory-style item usage, and menu/HUD systems.
-                        </p>
-                        <a href="https://mohamedalhajji.itch.io/the-time-within" target="_blank" rel="noreferrer">View on itch.io</a>
-                    </div>
-                </article>
-
-                <article class="game-feature reveal">
+            <div class="project-grid game-project-grid">
+                <button class="project-tile game-tile reveal" type="button" data-game="gambasim">
                     <img src="assets/GS.png" alt="GambaSim game screenshot" />
-                    <div>
-                        <span>Simulation concept</span>
-                        <h3>GambaSim</h3>
-                        <p>
-                            A casino simulation concept with Blackjack, progression systems, betting limits,
-                            risk mechanics, UI planning, and custom card design work.
-                        </p>
-                        <a href="https://mohamedalhajji.itch.io/" target="_blank" rel="noreferrer">Developer page</a>
+                    <span>01</span>
+                    <h3>GambaSim</h3>
+                    <p>Casino simulation with progression, betting systems, and custom UI assets.</p>
+                    <div class="tag-row">
+                        <span>Simulation</span>
+                        <span>Game Design</span>
+                        <span>Steam</span>
                     </div>
-                </article>
+                </button>
 
-                <article class="game-feature reveal">
-                    <img src="assets/CE.png" alt="Cyber's Edge game screenshot" />
-                    <div>
-                        <span>Arcade prototype</span>
-                        <h3>Cyber's Edge</h3>
-                        <p>
-                            A runner-style prototype focused on simple movement, obstacle timing, score chasing,
-                            and replayable arcade pacing.
-                        </p>
-                        <a href="https://mohamedalhajji.itch.io/cybersedge" target="_blank" rel="noreferrer">View on itch.io</a>
+                <button class="project-tile game-tile reveal" type="button" data-game="time-within">
+                    <img src="assets/TTW.png" alt="The Time Within game screenshot" />
+                    <span>02</span>
+                    <h3>The Time Within</h3>
+                    <p>First-person escape room with linked past and future puzzle rooms.</p>
+                    <div class="tag-row">
+                        <span>UE5</span>
+                        <span>Blueprints</span>
+                        <span>Puzzles</span>
                     </div>
-                </article>
+                </button>
+
+                <button class="project-tile game-tile reveal" type="button" data-game="cybers-edge">
+                    <img src="assets/CE.png" alt="Cyber's Edge game screenshot" />
+                    <span>03</span>
+                    <h3>Cyber's Edge</h3>
+                    <p>Arcade runner prototype focused on movement timing and replayability.</p>
+                    <div class="tag-row">
+                        <span>Runner</span>
+                        <span>Arcade</span>
+                        <span>Prototype</span>
+                    </div>
+                </button>
             </div>
         </section>
     </main>
+
+    <div class="project-modal" hidden>
+        <div class="modal-backdrop" data-close-modal></div>
+        <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" type="button" aria-label="Close project details" data-close-modal>Close</button>
+            <p class="eyebrow" id="modal-category"></p>
+            <h2 id="modal-title"></h2>
+            <p id="modal-summary"></p>
+            <div class="modal-grid">
+                <div>
+                    <h3>Details</h3>
+                    <ul id="modal-points"></ul>
+                </div>
+                <div>
+                    <h3>Tags</h3>
+                    <div class="tag-row" id="modal-tags"></div>
+                    <a class="modal-link" id="modal-link" href="#" target="_blank" rel="noreferrer">Open link</a>
+                </div>
+            </div>
+        </article>
+    </div>
 
     <footer class="site-footer">
         <span>Mohamed Al-Hajji</span>
         <span>Game Development</span>
     </footer>
 
-    <script src="script.js?v=20260510-2"></script>
+    <script src="script.js?v=20260510-3"></script>
 </body>
 </html>

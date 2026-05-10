@@ -4,11 +4,14 @@ const revealItems = document.querySelectorAll(".reveal");
 const sections = document.querySelectorAll("main section[id]");
 const projectModal = document.querySelector(".project-modal");
 const projectTiles = document.querySelectorAll("[data-project]");
+const gameTiles = document.querySelectorAll("[data-game]");
+const themeToggle = document.querySelector(".theme-toggle");
 const modalTitle = document.getElementById("modal-title");
 const modalCategory = document.getElementById("modal-category");
 const modalSummary = document.getElementById("modal-summary");
 const modalPoints = document.getElementById("modal-points");
 const modalTags = document.getElementById("modal-tags");
+const modalLink = document.getElementById("modal-link");
 
 const projectDetails = {
     "mini-lms": {
@@ -67,6 +70,66 @@ const projectDetails = {
         tags: ["Python", "AI", "Simulation", "Expected Value", "Math"]
     }
 };
+
+const gameDetails = {
+    "gambasim": {
+        category: "Simulation game",
+        title: "GambaSim",
+        summary: "A casino simulation project focused on Blackjack, progression systems, betting limits, risk mechanics, UI planning, and custom card design.",
+        points: [
+            "Presented first because it is the strongest game-dev project in this section.",
+            "Explores casino-style systems, unlocks, betting progression, and replay motivation.",
+            "Separate from the software portfolio so it supports your background without changing your main career direction."
+        ],
+        tags: ["Simulation", "Game Design", "UI", "Progression", "Steam"],
+        link: "https://store.steampowered.com/app/4158090/GambaSim/"
+    },
+    "time-within": {
+        category: "Unreal Engine project",
+        title: "The Time Within",
+        summary: "A first-person escape room project with two linked time periods, environmental puzzle logic, interactable objects, item usage, and menu/HUD systems.",
+        points: [
+            "Built around puzzle interaction and environmental progression.",
+            "Uses a past room and future room connected through shared puzzle logic.",
+            "Shows Unreal Engine and Blueprint experience without mixing game dev into the main software page."
+        ],
+        tags: ["Unreal Engine 5", "Blueprints", "Puzzle Design", "UI"],
+        link: "https://mohamedalhajji.itch.io/the-time-within"
+    },
+    "cybers-edge": {
+        category: "Arcade prototype",
+        title: "Cyber's Edge",
+        summary: "A runner-style prototype focused on movement timing, obstacles, score chasing, and replayable arcade pacing.",
+        points: [
+            "Simple arcade-style prototype with score-focused gameplay.",
+            "Useful as a small example of movement, obstacles, and game feel experimentation.",
+            "Kept in the separate game-dev section rather than the main software portfolio."
+        ],
+        tags: ["Arcade", "Runner", "Prototype", "Gameplay"],
+        link: "https://mohamedalhajji.itch.io/cybersedge"
+    }
+};
+
+function getPreferredTheme() {
+    return localStorage.getItem("theme") || "dark";
+}
+
+function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+
+    if (themeToggle) {
+        themeToggle.textContent = theme === "dark" ? "Light" : "Dark";
+        themeToggle.setAttribute("aria-label", `Switch to ${theme === "dark" ? "light" : "dark"} mode`);
+    }
+}
+
+setTheme(getPreferredTheme());
+
+themeToggle?.addEventListener("click", () => {
+    const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", nextTheme);
+    setTheme(nextTheme);
+});
 
 function closeNav() {
     document.body.classList.remove("nav-open");
@@ -129,8 +192,8 @@ window.addEventListener("keydown", (event) => {
     }
 });
 
-function openProjectModal(projectId) {
-    const project = projectDetails[projectId];
+function openProjectModal(projectId, collection = projectDetails) {
+    const project = collection[projectId];
 
     if (!projectModal || !project) {
         return;
@@ -141,6 +204,13 @@ function openProjectModal(projectId) {
     modalSummary.textContent = project.summary;
     modalPoints.innerHTML = project.points.map((point) => `<li>${point}</li>`).join("");
     modalTags.innerHTML = project.tags.map((tag) => `<span>${tag}</span>`).join("");
+
+    if (modalLink) {
+        modalLink.hidden = !project.link;
+        modalLink.href = project.link || "#";
+        modalLink.textContent = project.link ? "Open project link" : "";
+    }
+
     projectModal.hidden = false;
     document.body.classList.add("modal-open");
 }
@@ -156,6 +226,10 @@ function closeProjectModal() {
 
 projectTiles.forEach((tile) => {
     tile.addEventListener("click", () => openProjectModal(tile.dataset.project));
+});
+
+gameTiles.forEach((tile) => {
+    tile.addEventListener("click", () => openProjectModal(tile.dataset.game, gameDetails));
 });
 
 document.querySelectorAll("[data-close-modal]").forEach((button) => {
