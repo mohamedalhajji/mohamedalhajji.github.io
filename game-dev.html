@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mohamed Al-Hajji - Separate game development portfolio page." />
+    <title>Mohamed Al-Hajji | Game Development</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Mohamed Al-Hajji home">
+            <span class="brand-mark">MA</span>
+            <span>Mohamed Al-Hajji</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="resume.html">CV</a>
+            <a class="active" href="game-dev.html">Game Dev</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero game-hero">
+            <div class="hero-inner">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Separate portfolio section</p>
+                    <h1>Game development work.</h1>
+                    <p class="hero-text">
+                        This page keeps my game development work separate from my main software engineering portfolio.
+                        It shows creative technical projects, Unreal Engine experience, UI work, and small gameplay systems.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button primary" href="#games">View games</a>
+                        <a class="button secondary" href="index.html">Back to software portfolio</a>
+                    </div>
+                </div>
+
+                <aside class="hero-summary reveal" aria-label="Game development summary">
+                    <dl>
+                        <div>
+                            <dt>Tools</dt>
+                            <dd>Unreal Engine 5, Blueprints, Figma</dd>
+                        </div>
+                        <div>
+                            <dt>Focus</dt>
+                            <dd>Gameplay, UI, interactions</dd>
+                        </div>
+                        <div>
+                            <dt>Role</dt>
+                            <dd>Separate creative track</dd>
+                        </div>
+                    </dl>
+                </aside>
+            </div>
+        </section>
+
+        <section id="games" class="section-block">
+            <div class="section-header reveal">
+                <p class="eyebrow">Game projects</p>
+                <h2>Selected work</h2>
+                <p>These projects are presented as game development experience, not as my main software engineering direction.</p>
+            </div>
+
+            <div class="game-showcase">
+                <article class="game-feature reveal">
+                    <img src="assets/TTW.png" alt="The Time Within game screenshot" />
+                    <div>
+                        <span>Unreal Engine 5</span>
+                        <h3>The Time Within</h3>
+                        <p>
+                            A first-person escape room project with two linked time periods, environmental puzzle logic,
+                            interactable objects, inventory-style item usage, and menu/HUD systems.
+                        </p>
+                        <a href="https://mohamedalhajji.itch.io/the-time-within" target="_blank" rel="noreferrer">View on itch.io</a>
+                    </div>
+                </article>
+
+                <article class="game-feature reveal">
+                    <img src="assets/GS.png" alt="GambaSim game screenshot" />
+                    <div>
+                        <span>Simulation concept</span>
+                        <h3>GambaSim</h3>
+                        <p>
+                            A casino simulation concept with Blackjack, progression systems, betting limits,
+                            risk mechanics, UI planning, and custom card design work.
+                        </p>
+                        <a href="https://mohamedalhajji.itch.io/" target="_blank" rel="noreferrer">Developer page</a>
+                    </div>
+                </article>
+
+                <article class="game-feature reveal">
+                    <img src="assets/CE.png" alt="Cyber's Edge game screenshot" />
+                    <div>
+                        <span>Arcade prototype</span>
+                        <h3>Cyber's Edge</h3>
+                        <p>
+                            A runner-style prototype focused on simple movement, obstacle timing, score chasing,
+                            and replayable arcade pacing.
+                        </p>
+                        <a href="https://mohamedalhajji.itch.io/cybersedge" target="_blank" rel="noreferrer">View on itch.io</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>Mohamed Al-Hajji</span>
+        <span>Game Development</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
