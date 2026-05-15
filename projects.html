@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mohamed Al-Hajji software engineering projects." />
+    <title>Mohamed Al-Hajji | Projects</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css?v=20260515-1" />
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Mohamed Al-Hajji home">
+            <span class="brand-mark">MA</span>
+            <span>Mohamed Al-Hajji</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a class="active" href="projects.html">Projects</a>
+            <a href="resume.html">CV</a>
+            <a href="game-dev.html">Game Dev</a>
+            <a href="index.html#contact">Contact</a>
+            <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">Light</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero page-hero">
+            <div class="hero-inner">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Selected work</p>
+                    <p class="hero-name">Mohamed Al-Hajji</p>
+                    <h1>Projects</h1>
+                    <p class="hero-text">
+                        A focused list of software and coursework projects. Click any project to view the scope,
+                        stack, and realistic details.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block">
+            <div class="project-grid">
+                <button class="project-tile reveal" type="button" data-project="mini-lms">
+                    <h3>Mini LMS Backend</h3>
+                    <p>Spring Boot microservices learning project.</p>
+                    <div class="tag-row">
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </button>
+
+                <button class="project-tile reveal" type="button" data-project="p2p-chat">
+                    <h3>Encrypted P2P Chat</h3>
+                    <p>Python sockets, threads, peer discovery, and encryption.</p>
+                    <div class="tag-row">
+                        <span>Python</span>
+                        <span>Sockets</span>
+                        <span>Encryption</span>
+                    </div>
+                </button>
+
+                <button class="project-tile reveal" type="button" data-project="security-system">
+                    <h3>Home Security System</h3>
+                    <p>ESP32 security system with sensors and alert handling.</p>
+                    <div class="tag-row">
+                        <span>C++</span>
+                        <span>ESP32</span>
+                        <span>IoT</span>
+                    </div>
+                </button>
+
+                <button class="project-tile reveal" type="button" data-project="android-chatgpt">
+                    <h3>ChatGPT Android App</h3>
+                    <p>Java Android project focused on API integration.</p>
+                    <div class="tag-row">
+                        <span>Java</span>
+                        <span>Retrofit</span>
+                        <span>Gson</span>
+                    </div>
+                </button>
+
+                <button class="project-tile reveal" type="button" data-project="blackjack-ai">
+                    <h3>Blackjack AI Support</h3>
+                    <p>Decision-support concept using simulation and EV thinking.</p>
+                    <div class="tag-row">
+                        <span>Python</span>
+                        <span>AI</span>
+                        <span>Probability</span>
+                    </div>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <div class="project-modal" hidden>
+        <div class="modal-backdrop" data-close-modal></div>
+        <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" type="button" aria-label="Close project details" data-close-modal>Close</button>
+            <p class="eyebrow" id="modal-category"></p>
+            <h2 id="modal-title"></h2>
+            <p id="modal-summary"></p>
+            <div class="modal-grid">
+                <div>
+                    <h3>What it shows</h3>
+                    <ul id="modal-points"></ul>
+                </div>
+                <div>
+                    <h3>Stack</h3>
+                    <div class="tag-row" id="modal-tags"></div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer class="site-footer">
+        <span>Mohamed Al-Hajji</span>
+        <span>Projects</span>
+    </footer>
+
+    <script src="script.js?v=20260515-1"></script>
+</body>
+</html>

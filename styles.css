@@ -413,7 +413,7 @@ p {
 }
 
 .project-tile h3 {
-    margin-top: 34px;
+    margin-top: 0;
 }
 
 .project-tile p {
@@ -815,7 +815,7 @@ p {
 }
 
 .game-tile h3 {
-    margin-top: 22px;
+    margin-top: 0;
 }
 
 .modal-link {

@@ -39,10 +39,10 @@ const projectDetails = {
     "security-system": {
         category: "Embedded systems coursework",
         title: "Home Security System",
-        summary: "An ESP32-based home security system involving sensors, Wi-Fi communication, event logging, and alert logic.",
+        summary: "An ESP32-based home security system involving sensors, Wi-Fi communication, event logging, and alert handling.",
         points: [
             "Included as practical systems experience, not my main career direction.",
-            "Worked with sensor-based input and event-driven logic.",
+            "Worked with sensor-based input and event-driven behavior.",
             "Useful for showing C++ exposure outside normal desktop or backend applications."
         ],
         tags: ["C++", "ESP32", "Sensors", "IoT", "Wi-Fi"]
@@ -59,15 +59,15 @@ const projectDetails = {
         tags: ["Java", "Android Studio", "Retrofit", "Gson", "API Integration"]
     },
     "blackjack-ai": {
-        category: "AI and math concept",
+        category: "AI and probability concept",
         title: "Blackjack Decision Support AI",
         summary: "A Python AI concept focused on blackjack decision support using game-state evaluation, simulation thinking, and expected value comparison.",
         points: [
-            "Represents interest in math, probability, and decision-making under uncertainty.",
+            "Represents interest in probability and decision-making under uncertainty.",
             "Useful as a learning project around simulation and algorithmic reasoning.",
             "Best treated as a concept/project plan rather than a finished product."
         ],
-        tags: ["Python", "AI", "Simulation", "Expected Value", "Math"]
+        tags: ["Python", "AI", "Simulation", "Expected Value", "Probability"]
     }
 };
 
@@ -87,10 +87,10 @@ const gameDetails = {
     "time-within": {
         category: "Unreal Engine project",
         title: "The Time Within",
-        summary: "A first-person escape room project with two linked time periods, environmental puzzle logic, interactable objects, item usage, and menu/HUD systems.",
+        summary: "A first-person escape room project with two linked time periods, environmental puzzles, interactable objects, item usage, and menu/HUD systems.",
         points: [
             "Built around puzzle interaction and environmental progression.",
-            "Uses a past room and future room connected through shared puzzle logic.",
+            "Uses a past room and future room connected through shared puzzle progression.",
             "Shows Unreal Engine and Blueprint experience without mixing game dev into the main software page."
         ],
         tags: ["Unreal Engine 5", "Blueprints", "Puzzle Design", "UI"],

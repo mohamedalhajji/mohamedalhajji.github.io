@@ -6,7 +6,7 @@
     <meta name="description" content="Mohamed Al-Hajji - Software Engineer portfolio." />
     <title>Mohamed Al-Hajji | Software Engineer</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="styles.css?v=20260510-3" />
+    <link rel="stylesheet" href="styles.css?v=20260515-1" />
 </head>
 <body>
     <header class="site-header">
@@ -21,8 +21,8 @@
         </button>
 
         <nav class="site-nav" aria-label="Primary navigation">
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
+            <a class="active" href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
             <a href="resume.html">CV</a>
             <a href="game-dev.html">Game Dev</a>
             <a href="#contact">Contact</a>
@@ -38,113 +38,52 @@
                     <p class="hero-name">Mohamed Al-Hajji</p>
                     <h1>Software Engineer</h1>
                     <p class="hero-text">
-                        Fresh graduate focused on general software engineering, with strengths in C++, Python,
-                        algorithms, OOP, SQL, math-based problem solving, and clean UI thinking.
+                        Fresh computer engineering graduate focused on general software engineering and entry-level programming roles.
+                        I enjoy building practical systems, solving programming problems, and improving the way software feels to use.
                     </p>
                     <div class="hero-actions">
-                        <a class="button primary" href="#projects">View projects</a>
+                        <a class="button primary" href="projects.html">View projects</a>
                         <a class="button secondary" href="resume.html">View CV</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section-block">
+        <section class="section-block split-section">
             <div class="section-header reveal">
-                <p class="eyebrow">Selected work</p>
-                <h2>Projects</h2>
-                <p>Click a project to see the stack, scope, and realistic details.</p>
+                <p class="eyebrow">About</p>
+                <h2>Brief summary</h2>
+                <p>
+                    I’m strongest in programming fundamentals, especially C++, Python, algorithms, OOP, SQL,
+                    and coursework-heavy problem solving. I’m aiming for software engineering or general programming roles,
+                    with backend as a direction I’m continuing to grow into.
+                </p>
             </div>
 
-            <div class="project-grid">
-                <button class="project-tile reveal" type="button" data-project="mini-lms">
-                    <span>01</span>
-                    <h3>Mini LMS Backend</h3>
-                    <p>Spring Boot microservices learning project.</p>
-                    <div class="tag-row">
-                        <span>Java</span>
-                        <span>Spring Boot</span>
-                        <span>PostgreSQL</span>
-                    </div>
-                </button>
-
-                <button class="project-tile reveal" type="button" data-project="p2p-chat">
-                    <span>02</span>
-                    <h3>Encrypted P2P Chat</h3>
-                    <p>Python sockets, threads, peer discovery, and encryption.</p>
-                    <div class="tag-row">
-                        <span>Python</span>
-                        <span>Sockets</span>
-                        <span>Encryption</span>
-                    </div>
-                </button>
-
-                <button class="project-tile reveal" type="button" data-project="security-system">
-                    <span>03</span>
-                    <h3>Home Security System</h3>
-                    <p>ESP32 security system with sensors and alert logic.</p>
-                    <div class="tag-row">
-                        <span>C++</span>
-                        <span>ESP32</span>
-                        <span>IoT</span>
-                    </div>
-                </button>
-
-                <button class="project-tile reveal" type="button" data-project="android-chatgpt">
-                    <span>04</span>
-                    <h3>ChatGPT Android App</h3>
-                    <p>Java Android project focused on API integration.</p>
-                    <div class="tag-row">
-                        <span>Java</span>
-                        <span>Retrofit</span>
-                        <span>Gson</span>
-                    </div>
-                </button>
-
-                <button class="project-tile reveal" type="button" data-project="blackjack-ai">
-                    <span>05</span>
-                    <h3>Blackjack AI Support</h3>
-                    <p>Decision-support concept using simulation and EV thinking.</p>
-                    <div class="tag-row">
-                        <span>Python</span>
-                        <span>AI</span>
-                        <span>Math</span>
-                    </div>
-                </button>
-            </div>
-        </section>
-
-        <section id="skills" class="section-block split-section">
-            <div class="section-header reveal">
-                <p class="eyebrow">Strengths</p>
-                <h2>Core skills</h2>
-                <p>A compact view of the areas I want the portfolio to represent.</p>
-            </div>
-
-            <div class="skill-matrix reveal">
+            <div id="skills" class="skill-matrix reveal">
                 <div>
                     <h3>Programming</h3>
-                    <p>C++, Python, Java, OOP, debugging</p>
+                    <p>C++, Python, Java, OOP</p>
                 </div>
                 <div>
-                    <h3>Problem Solving</h3>
-                    <p>Algorithms, data structures, logic, math</p>
+                    <h3>Algorithms & Data Structures</h3>
+                    <p>Algorithmic thinking, data structures, problem solving</p>
+                </div>
+                <div>
+                    <h3>Math & Theory</h3>
+                    <p>Discrete mathematics, formal languages, automata theory, probability</p>
                 </div>
                 <div>
                     <h3>Databases</h3>
-                    <p>SQL, PL/SQL, relational design, PostgreSQL basics</p>
+                    <p>SQL, PL/SQL, relational algebra, PostgreSQL</p>
                 </div>
                 <div>
-                    <h3>Software Basics</h3>
-                    <p>REST APIs, Git, documentation, backend concepts</p>
+                    <h3>Backend Exposure</h3>
+                    <p>REST APIs, Spring Boot, authentication concepts, Docker Compose</p>
                 </div>
                 <div>
                     <h3>UI Sense</h3>
                     <p>Clean layouts, readable interfaces, Figma experience</p>
-                </div>
-                <div>
-                    <h3>Learning Style</h3>
-                    <p>Hands-on projects, references, AI assistance, iteration</p>
                 </div>
             </div>
         </section>
@@ -162,31 +101,11 @@
         </section>
     </main>
 
-    <div class="project-modal" hidden>
-        <div class="modal-backdrop" data-close-modal></div>
-        <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-            <button class="modal-close" type="button" aria-label="Close project details" data-close-modal>Close</button>
-            <p class="eyebrow" id="modal-category"></p>
-            <h2 id="modal-title"></h2>
-            <p id="modal-summary"></p>
-            <div class="modal-grid">
-                <div>
-                    <h3>What it shows</h3>
-                    <ul id="modal-points"></ul>
-                </div>
-                <div>
-                    <h3>Stack</h3>
-                    <div class="tag-row" id="modal-tags"></div>
-                </div>
-            </div>
-        </article>
-    </div>
-
     <footer class="site-footer">
         <span>Mohamed Al-Hajji</span>
         <span>Software Engineering Portfolio</span>
     </footer>
 
-    <script src="script.js?v=20260510-3"></script>
+    <script src="script.js?v=20260515-1"></script>
 </body>
 </html>
