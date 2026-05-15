@@ -19,9 +19,9 @@ const projectDetails = {
         title: "Mini LMS - Microservices Backend",
         summary: "A university backend project built to understand service separation, gateway routing, JWT authentication, PostgreSQL-backed services, and Docker Compose orchestration.",
         points: [
-            "Helped me understand how a larger backend can be split into smaller services.",
             "Includes Auth, Course, Enrollment, and API Gateway services.",
-            "Good representation of my backend learning direction, but not a claim of senior production experience."
+            "Uses PostgreSQL-backed services with Docker Compose orchestration.",
+            "Covers authentication flow, protected endpoints, and service separation."
         ],
         tags: ["Java", "Spring Boot", "PostgreSQL", "Docker", "JWT"]
     },
@@ -41,9 +41,9 @@ const projectDetails = {
         title: "Home Security System",
         summary: "An ESP32-based home security system involving sensors, Wi-Fi communication, event logging, and alert handling.",
         points: [
-            "Included as practical systems experience, not my main career direction.",
             "Worked with sensor-based input and event-driven behavior.",
-            "Useful for showing C++ exposure outside normal desktop or backend applications."
+            "Includes intrusion, fire, and gas detection scenarios.",
+            "Uses C++ logic for handling alerts and system responses."
         ],
         tags: ["C++", "ESP32", "Sensors", "IoT", "Wi-Fi"]
     },
@@ -52,9 +52,9 @@ const projectDetails = {
         title: "ChatGPT Android Application",
         summary: "A Java Android project that connected a simple chatbot interface to the OpenAI API using Retrofit and Gson.",
         points: [
-            "Included as API integration and UI experience.",
-            "Shows Java usage in a mobile environment.",
-            "Not presented as a target career direction because Android development is not my main goal."
+            "Uses Retrofit for API requests and Gson for JSON parsing.",
+            "Includes a simple chat interface for user messages and responses.",
+            "Focuses on API integration and UI flow."
         ],
         tags: ["Java", "Android Studio", "Retrofit", "Gson", "API Integration"]
     },
@@ -77,12 +77,13 @@ const gameDetails = {
         title: "GambaSim",
         summary: "A casino simulation project focused on Blackjack, progression systems, betting limits, risk mechanics, UI planning, and custom card design.",
         points: [
-            "Presented first because it is the strongest game-dev project in this section.",
             "Explores casino-style systems, unlocks, betting progression, and replay motivation.",
-            "Separate from the software portfolio so it supports your background without changing your main career direction."
+            "Includes Blackjack-focused gameplay and betting-limit progression.",
+            "Uses custom UI assets and card presentation work."
         ],
-        tags: ["Simulation", "Game Design", "UI", "Progression", "Steam"],
-        link: "https://store.steampowered.com/app/4158090/GambaSim/"
+        tags: ["Simulation", "UI", "Progression", "Steam"],
+        link: "https://store.steampowered.com/app/4158090/GambaSim/",
+        linkLabel: "Show in Steam"
     },
     "time-within": {
         category: "Unreal Engine project",
@@ -91,10 +92,11 @@ const gameDetails = {
         points: [
             "Built around puzzle interaction and environmental progression.",
             "Uses a past room and future room connected through shared puzzle progression.",
-            "Shows Unreal Engine and Blueprint experience without mixing game dev into the main software page."
+            "Includes interactable objects, item usage, menus, and HUD elements."
         ],
         tags: ["Unreal Engine 5", "Blueprints", "Puzzle Design", "UI"],
-        link: "https://mohamedalhajji.itch.io/the-time-within"
+        link: "https://mohamedalhajji.itch.io/the-time-within",
+        linkLabel: "Show in Itch.io"
     },
     "cybers-edge": {
         category: "Arcade prototype",
@@ -103,10 +105,11 @@ const gameDetails = {
         points: [
             "Simple arcade-style prototype with score-focused gameplay.",
             "Useful as a small example of movement, obstacles, and game feel experimentation.",
-            "Kept in the separate game-dev section rather than the main software portfolio."
+            "Focuses on pacing, obstacle timing, and replayability."
         ],
         tags: ["Arcade", "Runner", "Prototype", "Gameplay"],
-        link: "https://mohamedalhajji.itch.io/cybersedge"
+        link: "https://mohamedalhajji.itch.io/cybersedge",
+        linkLabel: "Show in Itch.io"
     }
 };
 
@@ -208,7 +211,7 @@ function openProjectModal(projectId, collection = projectDetails) {
     if (modalLink) {
         modalLink.hidden = !project.link;
         modalLink.href = project.link || "#";
-        modalLink.textContent = project.link ? "Open project link" : "";
+        modalLink.textContent = project.link ? (project.linkLabel || "Open project link") : "";
     }
 
     projectModal.hidden = false;
