@@ -23,7 +23,9 @@ const projectDetails = {
             "Uses PostgreSQL-backed services with Docker Compose orchestration.",
             "Covers authentication flow, protected endpoints, and service separation."
         ],
-        tags: ["Java", "Spring Boot", "PostgreSQL", "Docker", "JWT"]
+        tags: ["Java", "Spring Boot", "PostgreSQL", "Docker", "JWT"],
+        link: "https://github.com/mohamedalhajji/mini-lms-microservices",
+        linkLabel: "View Repository"
     },
     "p2p-chat": {
         category: "Python programming project",
@@ -34,7 +36,9 @@ const projectDetails = {
             "Worked with TCP/UDP communication, threading, and terminal interaction.",
             "The project strengthened my understanding of how programs communicate over a network."
         ],
-        tags: ["Python", "Sockets", "TCP/UDP", "Threads", "Encryption"]
+        tags: ["Python", "Sockets", "TCP/UDP", "Threads", "Encryption"],
+        link: "https://github.com/mohamedalhajji/NetworkingProject",
+        linkLabel: "View Repository"
     },
     "security-system": {
         category: "Embedded systems coursework",
@@ -43,9 +47,11 @@ const projectDetails = {
         points: [
             "Worked with sensor-based input and event-driven behavior.",
             "Includes intrusion, fire, and gas detection scenarios.",
-            "Uses C++ logic for handling alerts and system responses."
+            "Uses C++ control flow for handling alerts and system responses."
         ],
-        tags: ["C++", "ESP32", "Sensors", "IoT", "Wi-Fi"]
+        tags: ["C++", "ESP32", "Sensors", "IoT", "Wi-Fi"],
+        link: "https://github.com/mohamedalhajji/Capstone",
+        linkLabel: "View Repository"
     },
     "android-chatgpt": {
         category: "API integration project",
@@ -56,7 +62,9 @@ const projectDetails = {
             "Includes a simple chat interface for user messages and responses.",
             "Focuses on API integration and UI flow."
         ],
-        tags: ["Java", "Android Studio", "Retrofit", "Gson", "API Integration"]
+        tags: ["Java", "Android Studio", "Retrofit", "Gson", "API Integration"],
+        link: "https://github.com/0x-neon/MOB-GPT",
+        linkLabel: "View Repository"
     },
     "blackjack-ai": {
         category: "AI and probability concept",
@@ -67,7 +75,22 @@ const projectDetails = {
             "Useful as a learning project around simulation and algorithmic reasoning.",
             "Best treated as a concept/project plan rather than a finished product."
         ],
-        tags: ["Python", "AI", "Simulation", "Expected Value", "Probability"]
+        tags: ["Python", "AI", "Simulation", "Expected Value", "Probability"],
+        link: "https://github.com/mohamedalhajji/Blackjack-AI",
+        linkLabel: "View Repository"
+    },
+    "hashing-db": {
+        category: "Data structures coursework",
+        title: "Hashing Database Project",
+        summary: "A C++ data structures project implementing a custom hash table with double hashing, lazy deletion, rehashing, and web log analysis.",
+        points: [
+            "Implements a hash table with primary and secondary hash functions.",
+            "Uses web server logs to identify the top 10 most visited pages.",
+            "Compares the custom hash table approach with C++ unordered_map."
+        ],
+        tags: ["C++", "Hash Table", "Double Hashing", "Data Structures", "Log Analysis"],
+        link: "https://github.com/mohamedalhajji/DSProject",
+        linkLabel: "View Repository"
     }
 };
 
@@ -83,7 +106,7 @@ const gameDetails = {
         ],
         tags: ["Simulation", "UI", "Progression", "Steam"],
         link: "https://store.steampowered.com/app/4158090/GambaSim/",
-        linkLabel: "Show in Steam"
+        linkLabel: "View on Steam"
     },
     "time-within": {
         category: "Unreal Engine project",
@@ -94,9 +117,9 @@ const gameDetails = {
             "Uses a past room and future room connected through shared puzzle progression.",
             "Includes interactable objects, item usage, menus, and HUD elements."
         ],
-        tags: ["Unreal Engine 5", "Blueprints", "Puzzle Design", "UI"],
+        tags: ["Unreal Engine 5", "Visual Blueprints", "Puzzle Design", "UI"],
         link: "https://mohamedalhajji.itch.io/the-time-within",
-        linkLabel: "Show in Itch.io"
+        linkLabel: "View on Itch.io"
     },
     "cybers-edge": {
         category: "Arcade prototype",
@@ -109,7 +132,7 @@ const gameDetails = {
         ],
         tags: ["Arcade", "Runner", "Prototype", "Gameplay"],
         link: "https://mohamedalhajji.itch.io/cybersedge",
-        linkLabel: "Show in Itch.io"
+        linkLabel: "View on Itch.io"
     }
 };
 
@@ -211,7 +234,7 @@ function openProjectModal(projectId, collection = projectDetails) {
     if (modalLink) {
         modalLink.hidden = !project.link;
         modalLink.href = project.link || "#";
-        modalLink.textContent = project.link ? (project.linkLabel || "Open project link") : "";
+        modalLink.textContent = project.link ? (project.linkLabel || "View project") : "";
     }
 
     projectModal.hidden = false;
