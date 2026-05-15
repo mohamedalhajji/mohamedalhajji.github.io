@@ -179,11 +179,11 @@ img {
     min-height: calc(100svh - 75px);
     display: grid;
     align-items: center;
-    padding: clamp(54px, 7vw, 86px) 0;
+    padding: clamp(46px, 6vw, 74px) 0;
 }
 
 .compact-hero {
-    min-height: calc(100svh - 75px);
+    min-height: min(760px, calc(100svh - 75px));
 }
 
 .page-hero {
@@ -351,7 +351,7 @@ p {
 }
 
 .section-block {
-    padding: clamp(72px, 10vw, 128px) 0;
+    padding: clamp(58px, 8vw, 104px) 0;
     border-top: 1px solid var(--line);
     scroll-margin-top: 78px;
 }
@@ -359,9 +359,9 @@ p {
 .section-header {
     display: grid;
     grid-template-columns: minmax(0, 0.88fr) minmax(320px, 0.62fr);
-    gap: clamp(24px, 5vw, 80px);
+    gap: clamp(22px, 4vw, 64px);
     align-items: end;
-    margin-bottom: clamp(34px, 5vw, 64px);
+    margin-bottom: clamp(28px, 4vw, 50px);
 }
 
 .section-header .eyebrow {
@@ -543,8 +543,8 @@ p {
 }
 
 .skill-matrix div {
-    min-height: 160px;
-    padding: 22px;
+    min-height: 132px;
+    padding: 20px;
     border-right: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
 }
@@ -741,7 +741,7 @@ p {
 }
 
 .contact-section {
-    padding: clamp(78px, 12vw, 150px) 0;
+    padding: clamp(64px, 9vw, 118px) 0;
     border-top: 1px solid var(--line);
 }
 
