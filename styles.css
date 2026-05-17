@@ -581,7 +581,18 @@ p {
 
 .game-hero {
     min-height: auto;
-    padding-bottom: clamp(34px, 5vw, 56px);
+    padding: clamp(34px, 5vw, 58px) 0 clamp(26px, 4vw, 42px);
+}
+
+.game-hero .hero-inner {
+    grid-template-columns: minmax(0, 0.72fr) minmax(420px, 1fr);
+    gap: clamp(24px, 4vw, 48px);
+    align-items: center;
+}
+
+.game-hero h1 {
+    margin-top: 0;
+    font-size: clamp(2.7rem, 5vw, 5.4rem);
 }
 
 .game-showcase {
@@ -863,8 +874,20 @@ p {
     color: var(--text);
 }
 
-.certificates-section {
-    padding-top: clamp(42px, 6vw, 72px);
+.certificates-section,
+#games {
+    padding-top: clamp(34px, 5vw, 64px);
+    padding-bottom: clamp(42px, 6vw, 78px);
+}
+
+.certificates-section .section-header,
+#games .section-header {
+    margin-bottom: clamp(22px, 3vw, 34px);
+}
+
+.certificates-section .section-header h2,
+#games .section-header h2 {
+    font-size: clamp(1.9rem, 3.5vw, 3.35rem);
 }
 
 .certificate-grid {
@@ -876,13 +899,17 @@ p {
 .certificate-card {
     display: flex;
     flex-direction: column;
-    min-height: 230px;
-    padding: 22px;
+    min-height: 0;
+    overflow: hidden;
+    padding: 0;
     border: 1px solid var(--line);
     border-radius: var(--radius);
     background: var(--tile-bg);
     color: inherit;
+    font: inherit;
+    text-align: left;
     text-decoration: none;
+    cursor: pointer;
     transition: transform 170ms ease, border-color 170ms ease, background 170ms ease;
 }
 
@@ -894,7 +921,17 @@ p {
     outline: none;
 }
 
+.certificate-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: top center;
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+}
+
 .certificate-card span {
+    margin: 16px 18px 0;
     color: var(--accent);
     font-size: 0.78rem;
     font-weight: 850;
@@ -903,16 +940,12 @@ p {
 }
 
 .certificate-card h3 {
-    margin-top: 24px;
-}
-
-.certificate-card p {
-    margin-top: 12px;
-    color: var(--soft);
+    margin: 8px 18px 18px;
+    font-size: clamp(1.05rem, 1.6vw, 1.28rem);
 }
 
 .game-project-grid .game-tile {
-    min-height: 390px;
+    min-height: 350px;
 }
 
 .game-tile img {
@@ -947,6 +980,58 @@ p {
 .modal-link:hover {
     transform: translateY(-2px);
     text-decoration: none;
+}
+
+.certificate-modal[hidden] {
+    display: none;
+}
+
+.certificate-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    display: grid;
+    place-items: center;
+    padding: 18px;
+}
+
+.certificate-modal-card {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    width: min(1040px, 100%);
+    height: min(860px, calc(100vh - 36px));
+    overflow: hidden;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    background: var(--panel);
+    box-shadow: var(--shadow);
+}
+
+.certificate-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--line);
+}
+
+.certificate-modal-header h2 {
+    max-width: calc(100% - 92px);
+    font-size: clamp(1.15rem, 2vw, 1.8rem);
+}
+
+.certificate-modal-header .modal-close {
+    position: static;
+    flex: 0 0 auto;
+}
+
+#certificate-frame {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #fff;
 }
 
 .site-footer {
@@ -1099,6 +1184,10 @@ p {
         padding: 46px 0 64px;
     }
 
+    .game-hero {
+        padding: 36px 0 30px;
+    }
+
     h1 {
         font-size: clamp(3.05rem, 15vw, 4.4rem);
     }
@@ -1121,6 +1210,7 @@ p {
     .game-item,
     .project-grid,
     .featured-projects,
+    .certificate-grid,
     .modal-grid {
         grid-template-columns: 1fr;
     }

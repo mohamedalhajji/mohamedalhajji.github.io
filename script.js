@@ -5,6 +5,10 @@ const sections = document.querySelectorAll("main section[id]");
 const projectModal = document.querySelector(".project-modal");
 const projectTiles = document.querySelectorAll("[data-project]");
 const gameTiles = document.querySelectorAll("[data-game]");
+const certificateTiles = document.querySelectorAll("[data-certificate]");
+const certificateModal = document.querySelector(".certificate-modal");
+const certificateModalTitle = document.getElementById("certificate-modal-title");
+const certificateFrame = document.getElementById("certificate-frame");
 const themeToggle = document.querySelector(".theme-toggle");
 const modalTitle = document.getElementById("modal-title");
 const modalCategory = document.getElementById("modal-category");
@@ -215,6 +219,7 @@ window.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
         closeNav();
         closeProjectModal();
+        closeCertificateModal();
     }
 });
 
@@ -250,6 +255,30 @@ function closeProjectModal() {
     document.body.classList.remove("modal-open");
 }
 
+function openCertificateModal(button) {
+    if (!certificateModal || !certificateFrame || !button.dataset.certificate) {
+        return;
+    }
+
+    certificateModalTitle.textContent = button.dataset.title || "Certificate";
+    certificateFrame.src = button.dataset.certificate;
+    certificateModal.hidden = false;
+    document.body.classList.add("modal-open");
+}
+
+function closeCertificateModal() {
+    if (!certificateModal) {
+        return;
+    }
+
+    certificateModal.hidden = true;
+    document.body.classList.remove("modal-open");
+
+    if (certificateFrame) {
+        certificateFrame.src = "";
+    }
+}
+
 projectTiles.forEach((tile) => {
     tile.addEventListener("click", () => openProjectModal(tile.dataset.project));
 });
@@ -258,6 +287,14 @@ gameTiles.forEach((tile) => {
     tile.addEventListener("click", () => openProjectModal(tile.dataset.game, gameDetails));
 });
 
+certificateTiles.forEach((tile) => {
+    tile.addEventListener("click", () => openCertificateModal(tile));
+});
+
 document.querySelectorAll("[data-close-modal]").forEach((button) => {
     button.addEventListener("click", closeProjectModal);
+});
+
+document.querySelectorAll("[data-close-certificate]").forEach((button) => {
+    button.addEventListener("click", closeCertificateModal);
 });

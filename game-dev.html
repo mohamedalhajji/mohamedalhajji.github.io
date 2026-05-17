@@ -6,7 +6,7 @@
     <meta name="description" content="Mohamed Al-Hajji - Game development projects." />
     <title>Mohamed Al-Hajji | Game Development</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="styles.css?v=20260515-4" />
+    <link rel="stylesheet" href="styles.css?v=20260517-1" />
 </head>
 <body>
     <header class="site-header">
@@ -63,23 +63,23 @@
             </div>
 
             <div class="certificate-grid">
-                <a class="certificate-card reveal" href="assets/intro-to-game-design.pdf" target="_blank" rel="noreferrer">
+                <button class="certificate-card reveal" type="button" data-certificate="assets/intro-to-game-design.pdf" data-title="Intro to Game Design">
+                    <img src="assets/intro-to-game-design-thumb.jpg" alt="Intro to Game Design certificate preview" />
                     <span>Certificate</span>
                     <h3>Intro to Game Design</h3>
-                    <p>Game design fundamentals, player goals, mechanics, and structure.</p>
-                </a>
+                </button>
 
-                <a class="certificate-card reveal" href="assets/ux-in-game-design.pdf" target="_blank" rel="noreferrer">
+                <button class="certificate-card reveal" type="button" data-certificate="assets/ux-in-game-design.pdf" data-title="UX in Game Design">
+                    <img src="assets/ux-in-game-design-thumb.jpg" alt="UX in Game Design certificate preview" />
                     <span>Certificate</span>
                     <h3>UX in Game Design</h3>
-                    <p>User experience concepts for onboarding, clarity, feedback, and player flow.</p>
-                </a>
+                </button>
 
-                <a class="certificate-card reveal" href="assets/blueprint-scripting.pdf" target="_blank" rel="noreferrer">
+                <button class="certificate-card reveal" type="button" data-certificate="assets/blueprint-scripting.pdf" data-title="Blueprint Scripting">
+                    <img src="assets/blueprint-scripting-thumb.jpg" alt="Blueprint Scripting certificate preview" />
                     <span>Certificate</span>
                     <h3>Blueprint Scripting</h3>
-                    <p>Unreal Engine Blueprint scripting concepts for gameplay logic and interaction.</p>
-                </a>
+                </button>
             </div>
         </section>
 
@@ -146,11 +146,22 @@
         </article>
     </div>
 
+    <div class="certificate-modal" hidden>
+        <div class="modal-backdrop" data-close-certificate></div>
+        <article class="certificate-modal-card" role="dialog" aria-modal="true" aria-labelledby="certificate-modal-title">
+            <div class="certificate-modal-header">
+                <h2 id="certificate-modal-title">Certificate</h2>
+                <button class="modal-close" type="button" aria-label="Close certificate preview" data-close-certificate>Close</button>
+            </div>
+            <iframe id="certificate-frame" title="Certificate PDF preview"></iframe>
+        </article>
+    </div>
+
     <footer class="site-footer">
         <span>Mohamed Al-Hajji</span>
         <span>Game Development</span>
     </footer>
 
-    <script src="script.js?v=20260515-3"></script>
+    <script src="script.js?v=20260517-1"></script>
 </body>
 </html>
