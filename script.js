@@ -261,7 +261,7 @@ function openCertificateModal(button) {
     }
 
     certificateModalTitle.textContent = button.dataset.title || "Certificate";
-    certificateFrame.src = button.dataset.certificate;
+    certificateFrame.src = `${button.dataset.certificate}#toolbar=0&navpanes=0&scrollbar=0&view=Fit`;
     certificateModal.hidden = false;
     document.body.classList.add("modal-open");
 }
