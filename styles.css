@@ -84,19 +84,27 @@ img {
     position: sticky;
     top: 0;
     z-index: 20;
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, var(--page));
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    padding: 18px clamp(24px, 4vw, 56px);
+    padding: 18px 0;
     background: var(--nav-bg);
     border-bottom: 1px solid var(--line);
     backdrop-filter: blur(18px);
 }
 
+.site-header > .brand,
+.site-header > .nav-toggle,
+.site-header > .site-nav {
+    grid-area: 1 / 1;
+}
+
 .brand {
     display: inline-flex;
     align-items: center;
+    justify-self: start;
     gap: 12px;
     color: var(--text);
     font-weight: 760;
@@ -119,6 +127,7 @@ img {
 .site-nav {
     display: flex;
     align-items: center;
+    justify-self: end;
     gap: 4px;
 }
 
@@ -920,6 +929,10 @@ p {
     font-size: 1rem;
 }
 
+.modal-grid h3 + .tag-row {
+    margin-top: 12px;
+}
+
 .modal-grid ul {
     display: grid;
     gap: 10px;
@@ -1238,11 +1251,12 @@ p {
     }
 
     .site-header {
-        padding: 13px 16px;
+        padding: 13px 0;
     }
 
     .nav-toggle {
         display: block;
+        justify-self: end;
     }
 
     .nav-toggle[aria-expanded="true"] span:first-child {
