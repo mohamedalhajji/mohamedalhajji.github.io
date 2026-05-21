@@ -101,15 +101,15 @@ const projectDetails = {
 
 const gameDetails = {
     "gambasim": {
-        category: "Simulation game",
+        category: "Casino management simulation",
         title: "GambaSim",
-        summary: "A casino simulation project focused on Blackjack, progression systems, betting limits, risk mechanics, UI planning, and custom card design.",
+        summary: "A casino management and gambling simulation game where players build, run, and expand a casino while competing against rival PvE operators.",
         points: [
-            "Explores casino-style systems, unlocks, betting progression, and replay motivation.",
-            "Includes Blackjack-focused gameplay and betting-limit progression.",
-            "Uses custom UI assets and card presentation work."
+            "Centers on bankroll management, calculated risk, and strategic betting decisions.",
+            "Includes classic casino games such as blackjack, with winnings reinvested into progression.",
+            "Uses XP, unlocks, casino growth, and rival PvE competition to structure long-term play."
         ],
-        tags: ["Simulation", "UI", "Progression", "Steam"],
+        tags: ["Simulation", "Gambling", "Management", "Singleplayer", "Economy", "PvE"],
         link: "https://store.steampowered.com/app/4158090/GambaSim/",
         linkLabel: "View on Steam"
     },

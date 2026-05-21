@@ -575,6 +575,85 @@ p {
     gap: 16px;
 }
 
+.game-project-list {
+    display: grid;
+    gap: 16px;
+}
+
+.game-list-card {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+    gap: clamp(18px, 3vw, 34px);
+    align-items: center;
+    min-height: 220px;
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--tile-bg);
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 170ms ease, border-color 170ms ease, background 170ms ease;
+}
+
+.game-list-card:hover,
+.game-list-card:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--line-strong);
+    background: var(--tile-hover);
+    outline: none;
+}
+
+.game-list-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.game-list-card h3 {
+    margin-top: 0;
+}
+
+.game-list-card p {
+    max-width: 760px;
+    margin-top: 12px;
+    color: var(--soft);
+}
+
+.game-list-card .tag-row {
+    margin-top: 18px;
+}
+
+.game-list-card-featured {
+    grid-template-columns: minmax(320px, 0.48fr) minmax(0, 1fr);
+    min-height: 320px;
+    padding: clamp(18px, 3vw, 28px);
+    border-color: var(--line-strong);
+    background: linear-gradient(135deg, var(--tile-hover), var(--tile-bg));
+}
+
+.game-list-card-featured h3 {
+    font-size: clamp(2rem, 4.4vw, 4rem);
+}
+
+.game-list-card-featured p {
+    max-width: 860px;
+    font-size: clamp(1.02rem, 1.7vw, 1.22rem);
+}
+
+.game-card-label {
+    display: inline-flex;
+    margin-bottom: 12px;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 850;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
 .game-hero h1 {
     max-width: 900px;
 }
@@ -1117,6 +1196,15 @@ p {
         grid-template-columns: 1fr;
     }
 
+    .game-list-card,
+    .game-list-card-featured {
+        grid-template-columns: 1fr;
+    }
+
+    .game-list-card {
+        min-height: 0;
+    }
+
     .project-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -1328,6 +1416,15 @@ p {
         aspect-ratio: 16 / 9;
         border-right: 0;
         border-bottom: 1px solid var(--line);
+    }
+
+    .game-list-card,
+    .game-list-card-featured {
+        padding: 16px;
+    }
+
+    .game-list-card-featured h3 {
+        font-size: clamp(1.75rem, 10vw, 2.7rem);
     }
 
     .hero-actions .button,
