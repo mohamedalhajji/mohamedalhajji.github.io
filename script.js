@@ -137,6 +137,19 @@ const gameDetails = {
         tags: ["Arcade", "Runner", "Prototype", "Gameplay"],
         link: "https://mohamedalhajji.itch.io/cybersedge",
         linkLabel: "View on Itch.io"
+    },
+    "dodge-arena": {
+        category: "Arcade survival shooter",
+        title: "Dodge Arena",
+        summary: "A fast-paced arcade survival shooter where players dodge enemies and projectiles while shooting back to stay alive as long as possible.",
+        points: [
+            "Built around quick reactions, careful movement, and score-focused survival.",
+            "Difficulty increases over time to keep pressure on the player.",
+            "Combines projectile dodging, enemy avoidance, and shooting mechanics."
+        ],
+        tags: ["Arcade", "Bullet Hell", "Survival Shooter", "Windows"],
+        link: "https://mohamedalhajji.itch.io/dodge-arena",
+        linkLabel: "View on Itch.io"
     }
 };
 
