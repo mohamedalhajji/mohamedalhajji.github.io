@@ -1034,6 +1034,14 @@ p {
     background: #fff;
 }
 
+#certificate-image {
+    display: none;
+    width: 100%;
+    aspect-ratio: 792 / 612;
+    object-fit: contain;
+    background: #fff;
+}
+
 .site-footer {
     display: flex;
     justify-content: space-between;
@@ -1185,7 +1193,28 @@ p {
     }
 
     .game-hero {
+        min-height: auto;
         padding: 36px 0 30px;
+    }
+
+    .game-hero .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .game-hero h1 {
+        max-width: 9ch;
+        font-size: clamp(2.85rem, 13vw, 4rem);
+        line-height: 0.98;
+    }
+
+    .game-hero .hero-summary {
+        padding: 20px;
+    }
+
+    .hero-summary dd {
+        font-size: clamp(1rem, 6vw, 1.45rem);
+        line-height: 1.35;
     }
 
     h1 {
@@ -1217,6 +1246,68 @@ p {
 
     .project-tile {
         min-height: 210px;
+    }
+
+    .modal-card {
+        width: min(100%, calc(100vw - 28px));
+        max-height: calc(100dvh - 28px);
+        padding: 22px;
+    }
+
+    .modal-card > .modal-close {
+        position: static;
+        justify-self: end;
+        margin-bottom: 16px;
+    }
+
+    .modal-card .eyebrow {
+        font-size: 0.72rem;
+        line-height: 1.4;
+    }
+
+    .modal-card h2 {
+        margin-top: 10px;
+        font-size: clamp(2rem, 11vw, 3rem);
+    }
+
+    #modal-summary {
+        font-size: 1.05rem;
+        line-height: 1.55;
+    }
+
+    .modal-grid {
+        gap: 22px;
+        margin-top: 28px;
+    }
+
+    .modal-grid ul {
+        gap: 12px;
+        padding-left: 20px;
+    }
+
+    .certificate-modal {
+        padding: 14px;
+    }
+
+    .certificate-modal-card {
+        width: calc(100vw - 28px);
+        max-height: calc(100dvh - 28px);
+    }
+
+    .certificate-modal-header {
+        padding: 14px;
+    }
+
+    .certificate-modal-header h2 {
+        font-size: clamp(1.15rem, 7vw, 1.7rem);
+    }
+
+    #certificate-frame {
+        display: none;
+    }
+
+    #certificate-image {
+        display: block;
     }
 
     .skill-matrix div,

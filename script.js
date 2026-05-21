@@ -9,6 +9,7 @@ const certificateTiles = document.querySelectorAll("[data-certificate]");
 const certificateModal = document.querySelector(".certificate-modal");
 const certificateModalTitle = document.getElementById("certificate-modal-title");
 const certificateFrame = document.getElementById("certificate-frame");
+const certificateImage = document.getElementById("certificate-image");
 const themeToggle = document.querySelector(".theme-toggle");
 const modalTitle = document.getElementById("modal-title");
 const modalCategory = document.getElementById("modal-category");
@@ -275,6 +276,10 @@ function openCertificateModal(button) {
 
     certificateModalTitle.textContent = button.dataset.title || "Certificate";
     certificateFrame.src = `${button.dataset.certificate}#toolbar=0&navpanes=0&scrollbar=0&view=Fit`;
+    if (certificateImage && button.dataset.preview) {
+        certificateImage.src = button.dataset.preview;
+        certificateImage.alt = `${button.dataset.title || "Certificate"} preview`;
+    }
     certificateModal.hidden = false;
     document.body.classList.add("modal-open");
 }
@@ -289,6 +294,10 @@ function closeCertificateModal() {
 
     if (certificateFrame) {
         certificateFrame.src = "";
+    }
+
+    if (certificateImage) {
+        certificateImage.removeAttribute("src");
     }
 }
 
