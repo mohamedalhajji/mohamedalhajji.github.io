@@ -104,7 +104,7 @@ img {
 .brand {
     display: inline-flex;
     align-items: center;
-    justify-self: start;
+    justify-self: end;
     gap: 12px;
     color: var(--text);
     font-weight: 760;
@@ -127,7 +127,7 @@ img {
 .site-nav {
     display: flex;
     align-items: center;
-    justify-self: end;
+    justify-self: start;
     gap: 4px;
 }
 
@@ -1256,7 +1256,7 @@ p {
 
     .nav-toggle {
         display: block;
-        justify-self: end;
+        justify-self: start;
     }
 
     .nav-toggle[aria-expanded="true"] span:first-child {
