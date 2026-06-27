@@ -17,6 +17,7 @@ const modalSummary = document.getElementById("modal-summary");
 const modalPoints = document.getElementById("modal-points");
 const modalTags = document.getElementById("modal-tags");
 const modalLink = document.getElementById("modal-link");
+const modalGallery = document.getElementById("modal-gallery");
 
 const projectDetails = {
     "mini-lms": {
@@ -46,15 +47,25 @@ const projectDetails = {
         linkLabel: "View Repository"
     },
     "security-system": {
-        category: "Embedded systems coursework",
+        category: "Graduation project",
         title: "Home Security System",
-        summary: "An ESP32-based home security system involving sensors, Wi-Fi communication, event logging, and alert handling.",
+        summary: "A Smart Home Security graduation project built around an ESP32 controller, sensor-based monitoring, Wi-Fi communication, event logging, and alert handling.",
         points: [
-            "Worked with sensor-based input and event-driven behavior.",
-            "Includes intrusion, fire, and gas detection scenarios.",
-            "Uses C++ control flow for handling alerts and system responses."
+            "Presented as a Computer Engineering capstone project in June 2026.",
+            "Includes intrusion, fire, and gas detection scenarios driven by sensor input.",
+            "Uses C++ control flow, Wi-Fi communication, and event-driven alert responses."
         ],
-        tags: ["C++", "ESP32", "Sensors", "IoT", "Wi-Fi"],
+        tags: ["C++", "ESP32", "Sensors", "IoT", "Wi-Fi", "Capstone"],
+        images: [
+            {
+                src: "assets/home-security-presentation.jpeg",
+                alt: "Home Security System graduation project presentation"
+            },
+            {
+                src: "assets/home-security-demo.jpeg",
+                alt: "Home Security System project demo discussion"
+            }
+        ],
         link: "https://github.com/mohamedalhajji/Capstone",
         linkLabel: "View Repository"
     },
@@ -124,6 +135,19 @@ const gameDetails = {
         ],
         tags: ["Unreal Engine 5", "Visual Blueprints", "Puzzle Design", "UI"],
         link: "https://mohamedalhajji.itch.io/the-time-within",
+        linkLabel: "View on Itch.io"
+    },
+    "last-dream": {
+        category: "First-person puzzle game",
+        title: "The Last Dream",
+        summary: "A first-person puzzle game where the player wakes inside a dreamlike space and solves environmental challenges to escape.",
+        points: [
+            "Built around exploration, puzzle solving, and first-person interaction.",
+            "Uses a surreal dream setting to frame the escape experience.",
+            "Available as a downloadable Windows game on Itch.io."
+        ],
+        tags: ["Puzzle", "First-person", "Exploration", "Windows"],
+        link: "https://mohamedalhajji.itch.io/the-last-dream",
         linkLabel: "View on Itch.io"
     },
     "cybers-edge": {
@@ -249,6 +273,14 @@ function openProjectModal(projectId, collection = projectDetails) {
     modalSummary.textContent = project.summary;
     modalPoints.innerHTML = project.points.map((point) => `<li>${point}</li>`).join("");
     modalTags.innerHTML = project.tags.map((tag) => `<span>${tag}</span>`).join("");
+
+    if (modalGallery) {
+        const images = project.images || [];
+        modalGallery.hidden = images.length === 0;
+        modalGallery.innerHTML = images
+            .map((image) => `<img src="${image.src}" alt="${image.alt}" />`)
+            .join("");
+    }
 
     if (modalLink) {
         modalLink.hidden = !project.link;

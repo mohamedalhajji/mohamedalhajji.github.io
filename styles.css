@@ -435,6 +435,36 @@ p {
     padding-top: 20px;
 }
 
+.project-tile-featured {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1fr);
+    gap: clamp(18px, 3vw, 30px);
+    align-items: center;
+    min-height: 310px;
+    padding: 18px;
+    border-color: var(--line-strong);
+    background: linear-gradient(135deg, var(--tile-hover), var(--tile-bg));
+}
+
+.project-tile-featured img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.project-tile-featured h3 {
+    font-size: clamp(1.8rem, 3.4vw, 3.2rem);
+}
+
+.project-tile-featured p {
+    max-width: 680px;
+    font-size: clamp(1rem, 1.35vw, 1.14rem);
+}
+
 .featured-projects {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -918,6 +948,25 @@ p {
     font-size: 1.06rem;
 }
 
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.modal-gallery[hidden] {
+    display: none;
+}
+
+.modal-gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
 .modal-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(220px, 0.42fr);
@@ -1222,6 +1271,10 @@ p {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .project-tile-featured {
+        grid-column: 1 / -1;
+    }
+
     .certificate-grid {
         grid-template-columns: 1fr;
     }
@@ -1348,6 +1401,16 @@ p {
 
     .project-tile {
         min-height: 210px;
+    }
+
+    .project-tile-featured {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        padding: 16px;
+    }
+
+    .project-tile-featured img {
+        aspect-ratio: 16 / 10;
     }
 
     .modal-card {

@@ -6,7 +6,7 @@
     <meta name="description" content="Mohamed Al-Hajji software engineering projects." />
     <title>Mohamed Al-Hajji | Projects</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="styles.css?v=20260610-1" />
+    <link rel="stylesheet" href="styles.css?v=20260627-1" />
 </head>
 <body>
     <header class="site-header">
@@ -46,6 +46,21 @@
 
         <section class="section-block">
             <div class="project-grid">
+                <button class="project-tile project-tile-featured reveal" type="button" data-project="security-system">
+                    <img src="assets/home-security-presentation.jpeg" alt="Home Security System graduation project presentation" />
+                    <div>
+                        <span>Graduation project</span>
+                        <h3>Home Security System</h3>
+                        <p>ESP32 smart home security capstone using sensors, Wi-Fi communication, event logs, and alert handling.</p>
+                        <div class="tag-row">
+                            <span>C++</span>
+                            <span>ESP32</span>
+                            <span>IoT</span>
+                            <span>Capstone</span>
+                        </div>
+                    </div>
+                </button>
+
                 <button class="project-tile reveal" type="button" data-project="mini-lms">
                     <h3>Mini LMS Backend</h3>
                     <p>Spring Boot microservices backend with authentication, gateway routing, PostgreSQL services, and Docker Compose.</p>
@@ -63,16 +78,6 @@
                         <span>Python</span>
                         <span>Sockets</span>
                         <span>Encryption</span>
-                    </div>
-                </button>
-
-                <button class="project-tile reveal" type="button" data-project="security-system">
-                    <h3>Home Security System</h3>
-                    <p>ESP32 security system using sensors, Wi-Fi communication, event logs, and alert handling.</p>
-                    <div class="tag-row">
-                        <span>C++</span>
-                        <span>ESP32</span>
-                        <span>IoT</span>
                     </div>
                 </button>
 
@@ -116,6 +121,7 @@
             <p class="eyebrow" id="modal-category"></p>
             <h2 id="modal-title"></h2>
             <p id="modal-summary"></p>
+            <div class="modal-gallery" id="modal-gallery" hidden></div>
             <div class="modal-grid">
                 <div>
                     <h3>What it shows</h3>
@@ -135,6 +141,6 @@
         <span>Projects</span>
     </footer>
 
-    <script src="script.js?v=20260521-4"></script>
+    <script src="script.js?v=20260627-1"></script>
 </body>
 </html>
